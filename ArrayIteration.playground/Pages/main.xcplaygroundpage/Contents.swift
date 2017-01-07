@@ -13,7 +13,7 @@
 /*: question1
  ### 1. You're building an app and want to store all of the ingredients added to a cart. How would you represent this cart in code? The ingredients are "Chips", "Salsa", "Guacamole", "Red wine". Explicitly mark the content of the cart as strings.
  */
-// write your code here
+var cart: [String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -25,8 +25,7 @@
  */
 // write your code here
 
-
-
+var theseMyNumsBro: [Int] = [1,2,3,4,5,6,7,8,9,10]
 
 
 
@@ -36,7 +35,9 @@
  */
 // write your code here
 
-
+for thisYoNumBro in theseMyNumsBro {
+    print (thisYoNumBro)
+}
 
 
 
@@ -47,7 +48,9 @@
  */
 // write your code here
 
-
+for index in cart {
+    print (index)
+}
 
 
 
@@ -58,9 +61,11 @@
  */
 // write your code here
 
+func printMyThing (_ thing: String) { print (thing) }
 
-
-
+for item in cart {
+    printMyThing (item)
+}
 
 
 
@@ -69,20 +74,27 @@
  */
 // write your code here
 
+func greet (_names names: [String]){
+    for name in names { print ("Top of the morning \(name)") }
+}
 
 
-
-
+greet ( _names: cart )
 
 /*: question7
  ### 7. Create a function that takes an array of Ints (40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49) and returns an array of Ints. This function should look through the array of Ints and create a new array of Ints that only contain integers less than 50.
  */
 // write your code here
 
+func myFittyFilter (_ nums: [Int]) -> [Int] {
+    var thisManyCent: [Int] = []
+    for num in nums {
+        if num < 50 {thisManyCent.append(num)}
+    }
+    return thisManyCent
+}
 
+var flatironInts = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
-
-
-
-
+var fittyInts = myFittyFilter(flatironInts)
 
